@@ -5,17 +5,17 @@
 ############################################################
 # Basic Settings (Edit here if you wish)
 ############################################################
-PRJ=WFDE
+PRJ=W5E5
 RUN=LR__
 #PRJ=AK10
 #RUN=LR__
 #PRJ=mesc
-YEARMIN=1979
-YEARMAX=1979
+YEARMIN=2019
+YEARMAX=2019
 #YEARMIN=2014
 #YEARMAX=2014
 SECINT=86400
-LDBG=27641
+LDBG=150
 #LDBG=5734  # must be smaller than L. (regional)
 ############################################################
 # Expert Settings (Do not edit here unless you are an expert)
@@ -29,8 +29,8 @@ PROG=./main
 # Note that L (n0l) is prescribed in main.f. You also need to
 # edit main.f and re-compile it.)
 ############################################################
-MAP=.WFDEI    # for Global 2018 (.hlf)
-SUF=.hlf
+MAP=.CAMA    # for Global 2018 (.hlf)
+SUF=.bk5
  
 #MAP=.SNU     # for Korean peninsula (.ko5)
 #SUF=.ko5

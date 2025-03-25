@@ -17,8 +17,8 @@
 #
 # Setting
 #
-LONMIN=138; LONMAX=141; LATMIN=34; LATMAX=38; SUF=.tk5
-LONMIN=-3; LONMAX=1; LATMIN=50; LATMAX=53; SUF=.ln5
+#LONMIN=138; LONMAX=141; LATMIN=34; LATMAX=38; SUF=.tk5
+LONMIN=98; LONMAX=102; LATMIN=13; LATMAX=20; SUF=.bk5
 #
 # In
 #
@@ -30,15 +30,12 @@ LSTOUT=../org/GRanD/GRanD${SUF}.raw.txt  # Extracted the reservoirs in $NAMES
 ############################################################
 #
 ############################################################
-NAMES="Yagisawa  Naramata      Fujiwara  Aimata 
-       Sonohara  Shimokubo     Kusaki    Wataraseyusuichi
-       Arakawa   Futase
-       Ogohchi   Murayamakami  Murayamashimo
-       Sagami    Shiroyama     Miyagase"
-NAMES=
-# Urayama and Takizawa were missing in GRanD
-# Miho Doshi Ishigoya were missing but can be neglected
-# Because, these are out of basin, too small, and sub-dam, respectively.
+NAMES="Sirikit Bhumibol Pasak_Chonlasit Srinagrind Tha_Tung_Na
+       Mae_Ngat  Me-Kuang      Kiwlom  Mae_Chang 
+       Chulabhorn  Huai_Kum     Bueng_Boraphet    Tabsalao
+       Lamtakhong   Krasoew
+       Khao_Laem   Lamphraphloeng  Huai_Sam_Nak_Mai_Teng
+       Beng_phra"
 ############################################################
 # Job 1 Dams in the area
 ############################################################

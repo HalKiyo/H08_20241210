@@ -15,8 +15,8 @@
 #
 # Setting
 #
-LONMIN=138; LONMAX=141; LATMIN=34; LATMAX=38; SUF=.tk5; ARG=$ARGTK5
-LONMIN=-3;  LONMAX=1;   LATMIN=50; LATMAX=53; SUF=.ln5; ARG=$ARGLN5
+#LONMIN=138; LONMAX=141; LATMIN=34; LATMAX=38; SUF=.tk5; ARG=$ARGTK5
+LONMIN=98;  LONMAX=102;   LATMIN=13; LATMAX=20; SUF=.bk5; ARG=$ARGBK5
 #
 # In
 #
@@ -25,11 +25,12 @@ RIVARA=../../map/out/riv_ara_/rivara.CAMA${SUF}
 #
 # Reservoirs to include
 #
-NAMES2="Yagisawa  Naramata      Fujiwara  Aimata 
-        Sonohara  Shimokubo     Kusaki    Wataraseyusuichi
-        Arakawa   Futase
-        Ogohchi   Murayama
-        Sagami    Shiroyama     Miyagase"
+NAMES2="Sirikit Bhumibol Pasak_Chonlasit Srinagrind Tha_Tung_Na
+       Mae_Ngat  Me-Kuang      Kiwlom  Mae_Chang 
+       Chulabhorn  Huai_Kum     Bueng_Boraphet    Tabsalao
+       Lamtakhong   Krasoew
+       Khao_Laem   Lamphraphloeng  Huai_Sam_Nak_Mai_Teng
+       Beng_phra"
 # Urayama and Takizawa were missing in GRanD
 # Miho Doshi Ishigoya were missing but can be neglected
 # Because, these are out of basin, too small, and sub-dam, respectively.

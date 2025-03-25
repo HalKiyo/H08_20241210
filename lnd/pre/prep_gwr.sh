@@ -8,12 +8,12 @@
 ############################################################
 # settings (Edit below)
 ############################################################
-L=259200
-XY="720 360"
-L2X=../../map/dat/l2x_l2y_/l2x.hlf.txt
-L2Y=../../map/dat/l2x_l2y_/l2y.hlf.txt
-LONLAT="-180 180 -90 90"
-SUF=.hlf
+L=4032
+XY="48 84"
+SUF=.bk5
+L2X=../../map/dat/l2x_l2y_/l2x${SUF}.txt
+L2Y=../../map/dat/l2x_l2y_/l2y${SUF}.txt
+LONLAT="98 102 13 20"
 ARG="$L $XY $L2X $L2Y $LONLAT"
 
 # Regional setting (.ko5)
@@ -46,8 +46,8 @@ OPTAGR=yes              # aggregation
 DIRSLP=../../map/dat/slp_cls_
 SOITYP=../../map/dat/soi_typ_/GSWP3___00000000${SUF}
 GEOLOG=../../map/dat/geo_cls_/OneGeo__00000000.3cls${SUF}
-  TAIR=../../met/dat/Tair____/wfde____00000000${SUF}
-  PRCP=../../met/dat/Prcp____/wfde____00000000${SUF}
+  TAIR=../../met/dat/Tair____/W5E5____00000000${SUF}
+  PRCP=../../met/dat/Prcp____/W5E5____00000000${SUF}
 #  TAIR=../../met/dat/Tair____/AMeDAS1_00000000${SUF} #for kyusyu
 #  PRCP=../../met/dat/Prcp____/AMeDAS1_00000000${SUF} #for kyusyu
    PRM=../../map/dat/prm_msk_/prmmsk.merkator${SUF}

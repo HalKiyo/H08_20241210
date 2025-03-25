@@ -5,19 +5,19 @@
 ############################################################
 # Settings (Edit here if you change settings)
 ############################################################
-PRJ="WFDE"                         # project
+PRJ="W5E5"                         # project
 #PRJ="AK10"
 RUN="LR__"                          # run
 #PRJMET=WFDE                        # project for meteorology
 #RUNMET=I___
-PRJMET=wfde
+PRJMET=W5E5
 RUNMET=____                        # run     for meteorology
 #PRJMET=AMeD
 #RUNMET=AS1_
-PRJDEM=WFDE                         # project for water demand
+PRJDEM=W5E5                         # project for water demand
 RUNDEM=N_C_                        # run     for water demand
 #RUNDEM=LECD
-PRJENV=WFDE                         # project for environmental flow
+PRJENV=W5E5                         # project for environmental flow
 RUNENV=LR__                         # run     for environmental flow
 #PRJENV=AK10                        # setting for Kyusyu
 #RUNENV=LR__
@@ -51,9 +51,9 @@ OPTNNB=new
 #YEAREND=2063; MONEND=12; DAYEND=00  # year, month, day of final   state
 #DAYS=365; TIME=31536000
 #
-YEAR=1979;    MON=00;    DAY=00     # year, month, day to report
-YEARINI=1978; MONINI=12; DAYINI=00  # year, month, day of initial state
-YEAREND=1979; MONEND=12; DAYEND=00  # year, month, day of final   state
+YEAR=2019;    MON=00;    DAY=00     # year, month, day to report
+YEARINI=2018; MONINI=12; DAYINI=00  # year, month, day of initial state
+YEAREND=2019; MONEND=12; DAYEND=00  # year, month, day of final   state
 DAYS=365; TIME=31536000
 #
 #YEAR=2079;    MON=00;    DAY=00     # year, month, day to report
@@ -68,13 +68,13 @@ NUM=0                            # id of basin (0 for globe)
 ############################################################
 # Geography (Edit here if you change spatial domain/resolution)
 ############################################################
-L="259200"                          # total num of cells
-XY="720 360"                        # X and Y
-L2X=../../map/dat/l2x_l2y_/l2x.hlf.txt 
-L2Y=../../map/dat/l2x_l2y_/l2y.hlf.txt
-LONLAT="-180 180 -90 90"            # geographical range
-SUF=.hlf                            # suffix
-MAP=.WFDEI                          # map
+L="4032"                          # total num of cells
+XY="48 84"                        # X and Y
+SUF=.bk5                            # suffix
+L2X=../../map/dat/l2x_l2y_/l2x${SUF}.txt 
+L2Y=../../map/dat/l2x_l2y_/l2y${SUF}.txt
+LONLAT="98 102 13 20"            # geographical range
+MAP=.CAMA                          # map
 #
 # for parallel computing (Land only)
 #L="67209"                          # total num of land cells
@@ -186,6 +186,7 @@ FRIVNUM=../../map/out/riv_num_/rivnum${MAP}${SUF}  # river id
 #FRIVNUM=./temp.baka.hlf
 FLNDARA=../../map/dat/lnd_ara_/lndara${MAP}${SUF}  # land area
 FFLWDIR=../../map/dat/flw_dir_/flwdir${MAP}${SUF}  # flwo direction
+FRIVMOU=../../map/out/riv_mou_/rivmou${MAP}${SUF}  # river mouse
 #
 FIRGARA=../../map/dat/irg_ara_/S05_____20000000${SUF}
 FPOPTOT=../../map/dat/pop_tot_/C05_a___20000000${SUF}
@@ -954,7 +955,8 @@ fi
 FRIVOUT=$DIRRIVOUT/$PRJ$RUN$YEAR$MON$DAY$SUF
 if [ -f $FRIVOUT ]; then
   htmask $ARG $FRIVOUT $MASK eq $NUM $TEMP > $DN
-  htmask $ARG $TEMP  $FFLWDIR eq 9   $TEMP > $DN
+  #htmask $ARG $TEMP  $FFLWDIR eq 9   $TEMP > $DN
+  htmask $ARG $TEMP $FRIVMOU eq 9 $TEMP > $DN 
   RIVOUT=`htstat $ARG sum $TEMP | \
   awk '{print $1*86400*'${DAYS}'/1000/1000/1000/1000}'`  
 else

@@ -23,7 +23,7 @@ cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 c parameter (array)
       integer           n0l             !! number of grids in horizontal
       integer           n0t
-      parameter        (n0l=259200)
+      parameter        (n0l=4032)
 c     parameter        (n0l=11088)
 c      parameter        (n0l=32400)
       parameter        (n0t=3) 

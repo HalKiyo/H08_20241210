@@ -5,13 +5,13 @@
 ############################################################
 # Geography (Edit here if you change spatial domain/resolution)
 ############################################################
-L=259200
-XY="720 360"
-L2X=../../map/dat/l2x_l2y_/l2x.hlf.txt
-L2Y=../../map/dat/l2x_l2y_/l2y.hlf.txt
-LONLAT="-180 180 -90 90"
-SUF=.hlf
-MAP=.WFDEI
+L=4032
+XY="48 84"
+SUF=.bk5
+L2X=../../map/dat/l2x_l2y_/l2x${SUF}.txt
+L2Y=../../map/dat/l2x_l2y_/l2y${SUF}.txt
+LONLAT="98 102 13 20"
+MAP=.CAMA
 
 # Regional setting (.ko5)
 #L=11088

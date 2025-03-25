@@ -5,10 +5,10 @@
 ############################################################
 # Basic Settings (edit here if you wish)
 ############################################################
-PRJ=WFDE		# Project name
+PRJ=W5E5		# Project name
 RUN=LR__               # Run name
-YEARMIN=1979		# start year
-YEARMAX=1979           # end year
+YEARMIN=2019		# start year
+YEARMAX=2019           # end year
 
 #PRJ=AK10              # for Kyusyu (.ks1) 
 #RUN=LR__
@@ -16,8 +16,8 @@ YEARMAX=1979           # end year
 #YEARMAX=2014
 
 SECINT=86400            # interval
-LDBG=43420             # debugging point
-PRJMET=wfde
+LDBG=150             # debugging point
+PRJMET=W5E5
 RUNMET=____
 
 #PRJMET=AMeD           # for Kyusyu (.ks1)
@@ -37,8 +37,8 @@ PROG=./main
 # Note that L (n0l) is prescribed in main.f. You also need to 
 # edit main.f and re-compile it.)
 ############################################################
-SUF=.hlf                # Suffix
-MAP=.WFDEI              # Map
+SUF=.bk5                # Suffix
+MAP=.CAMA              # Map
 
 #SUF=.hlo                # for parallel computing (land only)  
 #MAP=.WFDEI

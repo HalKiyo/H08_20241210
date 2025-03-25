@@ -5,10 +5,10 @@
 ############################################################
 # Geographical setting (Edit here if you change spatial domain/resolution)
 ############################################################
-L=259200
-XY="720 360"
-LONLAT="-180 180 -90 90"
-SUF=.hlf
+#L=259200
+#XY="720 360"
+#LONLAT="-180 180 -90 90"
+#SUF=.hlf
 
 #1deg x 1deg of globe (.one)
 #L=64800
@@ -33,6 +33,18 @@ SUF=.hlf
 #XY="180 180"
 #LONLAT="129 132 31 34"
 #SUF=.ks1
+
+#5min x 5min of Tokyo
+#L=1728
+#XY="36 48"
+#LONLAT="138 141 34 38"
+#SUF=.tk5
+
+#5min x 5min of Bangkok
+L=4032
+XY="48 84"
+LONLAT="98 102 13 20"
+SUF=.bk5
 
 ############################################################
 # Output (Do not edit here unless you are an expert)
