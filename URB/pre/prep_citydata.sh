@@ -24,16 +24,14 @@ for file in $(find . -name "*${converted_extension}"); do
     new_file=$(echo "$file" | sed 's/-/\//g')
     save_file=${DIRH08}${new_file}
 
-    # 保存先directoryを取得
     save_dir=$(dirname "$save_file")
     
-    # directoryが存在しない場合は作成
     if [ ! -d "$save_dir" ]; then
         echo "Creating directory: $save_dir"
         mkdir -p "$save_dir"
     fi
 
-    # ファイルをリネームして移動
+    echo "${save_file//$converted_extension/$original_extension}"
     mv "${DIRORG}${file}" "${save_file//$converted_extension/$original_extension}"
 done
 

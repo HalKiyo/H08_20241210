@@ -24,13 +24,14 @@ PSXY="gmt psxy"           # ubuntu
 ############################################################
 #ARG="$ARGCT5"; SUF=.ct5; ID=00000098
 #ARG="$ARGLN5"; SUF=.ln5; ID=00000038
-ARG="$ARGTK5"; SUF=.tk5; ID=
+#ARG="$ARGTK5"; SUF=.tk5; ID=
 #ARG="$ARGCN5"; SUF=.cn5; ID=00000032
 #ARG="$ARGLA5"; SUF=.la5; ID=00000017
 #ARG="$ARGRJ5"; SUF=.rj5; ID=00000016
 #ARG="$ARGPR5"; SUF=.pr5; ID=00000021
-ARG="$ARGTY5"; SUF=.ty5; ID=
-ARG="$ARGSY5"; SUF=.sy5; ID=
+#ARG="$ARGTY5"; SUF=.ty5; ID=
+#ARG="$ARGSY5"; SUF=.sy5; ID=
+ARG="$ARGBK5"; SUF=.bk5; ID=00000036
 
 YMD=00000000
 
@@ -67,7 +68,7 @@ BIN=../../map/out/riv_num_/rivnum.CAMA${SUF}
 CTYMSK=../../map/dat/cty_msk_/GPW_____${YMD}${SUF}
 CTYPRF=../../map/dat/cty_prf_/GPW_____${YMD}${SUF}
 CTYSWG=../../map/dat/cty_swg_/GPW_____${YMD}${SUF}
-if [ "$SUF" = ".tk5" ]; then
+if [ "$SUF" = ".bk5" ]; then
   CTYMSK=../org/KKT/cty_msk_${SUF}
   #  CTYPRF=../org/KKT/cty_prf_${SUF}
     CTYPRF=../dat/cty_prf_.full2${SUF}

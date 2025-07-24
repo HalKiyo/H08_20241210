@@ -3,6 +3,12 @@
 #to   prepare flow direction 
 #
 #
+LBK5="4032"
+XYBK5="48 84"
+L2XBK5=${DIRH08}/map/dat/l2x_l2y_/l2x.bk5.txt
+L2YBK5=${DIRH08}/map/dat/l2x_l2y_/l2y.bk5.txt
+LONLATBK5="98 102 13 20"
+ARGBK5="$LBK5 $XYBK5 $L2XBK5 $L2YBK5 $LONLATBK5"
 #
 ############################################################
 # Setting
@@ -16,6 +22,7 @@ SUF=.rj5; ARG=${ARGRJ5}    # Rio de Janeiro
 SUF=.pr5; ARG=${ARGPR5}    # Paris
 SUF=.ty5; ARG=${ARGTY5}    # Tokyo
 SUF=.sy5; ARG=${ARGSY5}    # Sydney
+SUF=.bk5; ARG=${ARGBK5}    # Bangkog
 ############################################################
 # Input
 ############################################################

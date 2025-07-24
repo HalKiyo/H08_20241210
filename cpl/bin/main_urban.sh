@@ -7,27 +7,16 @@
 ############################################################
 # Basic settings (Edit here if you like)
 ############################################################
-PRJ=WFDE		# Project name
 PRJ=W5E5		# Project name
 #RUN=N_C_                # Run name
 #RUN=LECD                # Run name
-RUN=N_x4                # Run name URBAN
-YEARMIN=1979           
-YEARMAX=1979            
+RUN=N_C4                # Run name URBAN
 #YEARMIN=1986
 #YEARMAX=1986
 YEARMIN=2019
 YEARMAX=2019
 SECINT=86400            # interval
 #LDBG=80076              # debugging point (high plains)
-PRJMET=wfde             # Project name of meteorological data
-RUNMET=____             # Run     name of meteorological data
-PRJLR__=WFDE            # Project name of LR__ simulation (Manual Ch.8,9)
-RUNLR__=LR__            # Run     name of LR__ simulation (Manual Ch.8,9)
-PRJ__C_=WFDE            # Project name of __C_ simulation (Manual Ch.10)
-RUN__C_=__C_            # Run     name of __C_ simulation (Manual Ch.10)
-PRJN_C_=WFDE            # Project name of N_C_ simulation (Manual Ch.13)
-RUNN_C_=N_C_            # Run     name of N_C_ simulation (Manual Ch.13)
 PRJMET=W5E5
 RUNMET=____
 PRJLR__=W5E5
@@ -51,25 +40,20 @@ PROG=./main_urban       # program
 # Note that L (n0l) is prescribed in main.f. You also need to
 # edit main.f and re-compile it.)
 ############################################################
-SUF=.hlf                # Suffix
-MAP=.WFDEI              # Map
-
-#SUF=.ko5
-#MAP=.SNU
-
 #SUF=.ct5                # Suffix Cape Town
 #SUF=.ln5                # Suffix London
 #SUF=.tk5                # Suffix Tokyo
 #SUF=.cn5                # Suffix Chennai
 #SUF=.la5                # Suffix LA
-SUF=.rj5                # Suffix Rio
+#SUF=.rj5                # Suffix Rio
 #SUF=.pr5                # Suffix Paris
+SUF=.bk5
 
 MAP=.CAMA              # Map
 
 #LDBG=850              # any integer number not larger than n0l
 #LDBG=1080             # any integer number not larger than n0l
-LDBG=2400
+LDBG=150
 ############################################################
 # Mosaic settings (Do not edit here unless you are an expert)
 ############################################################
