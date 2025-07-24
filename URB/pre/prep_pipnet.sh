@@ -8,6 +8,14 @@
 #
 ############################################################
 source ~/.bashrc
+
+LBK5="4032"
+XYBK5="48 84"
+L2XBK5=${DIRH08}/map/dat/l2x_l2y_/l2x.bk5.txt
+L2YBK5=${DIRH08}/map/dat/l2x_l2y_/l2y.bk5.txt
+LONLATBK5="98 102 13 20"
+ARGBK5="$LBK5 $XYBK5 $L2XBK5 $L2YBK5 $LONLATBK5"
+
 L=1728; SUF=.tk5; ARG=$ARGTK5; NUMMAX=4 ID=        
 #L=1296; SUF=.ct5; ARG=$ARGCT5; NUMMAX=3 ID=00000098
 #L=1728; SUF=.ln5; ARG=$ARGLN5; NUMMAX=1 ID=00000038
@@ -17,6 +25,7 @@ L=1728; SUF=.tk5; ARG=$ARGTK5; NUMMAX=4 ID=
 #L=5184; SUF=.pr5; ARG=$ARGPR5; NUMMAX=1 ID=00000021
 L=1728; SUF=.ty5; ARG=$ARGTY5; NUMMAX=4 ID=
 L=1728; SUF=.sy5; ARG=$ARGSY5; NUMMAX=3 ID=
+L=4032; SUF=.bk5; ARG=$ARGBK5; NUMMAX=5 ID=00000036
 
 YMD=00000000
 JOB=2
@@ -30,8 +39,8 @@ RIVOUT=../../riv/out/riv_out_/W5E5LR__20190000${SUF}
 CPTDRN=./CPT/drn.cpt
 CPTDRN=temp.cpt
 CPTDEMDOM=./CPT/demdom.cpt
-FRCGWD=../../map/dat/frc_gwd_/D12.CAMA${SUF}
-FRCGWI=../../map/dat/frc_gwi_/D12.CAMA${SUF}
+FRCGWD=../../map/dat/frc_gwd_/D12${SUF}
+FRCGWI=../../map/dat/frc_gwi_/D12${SUF}
 RIVARA=../../map/out/riv_ara_/rivara.CAMA${SUF}
 if [ $JOB = 1 ]; then
 # input
@@ -70,7 +79,13 @@ if [ $JOB = 2 ]; then
 # output
   DEMINDNEW=../../map/dat/dem_ind_/AQUASTAT20000000.full${SUF}
   DEMDOMNEW=../../map/dat/dem_dom_/AQUASTAT20000000.full${SUF}
+
   DRN=../../map/dat/cty_drn_/FUL1____${SUF}
+  DIR_PATH=$(dirname "$DRN")
+  if [ ! -d "$DIR_PATH" ]; then
+          mkdir -p "$DIR_PATH"
+  fi
+
   PNGDRN=temp.drn${SUF}.full.png
   PNGDEMDOM=temp.demdom${SUF}.full.png
   FRCGWDNEW=../../map/dat/frc_gwd_/FUL1____.CAMA${SUF}

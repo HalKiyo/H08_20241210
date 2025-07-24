@@ -6,7 +6,7 @@
 # Basic Settings (edit here if you wish)
 ############################################################
 PRJ=W5E5		# Project name
-RUN=LR__               # Run name
+RUN=__C_               # Run name
 YEARMIN=2019		# start year
 YEARMAX=2019           # end year
 

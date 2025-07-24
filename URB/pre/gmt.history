@@ -2,6 +2,7 @@
 BEGIN GMT 6.4.0
 B	a1.0f1.0::/a1.0f1.0::neWS
 J	X
-JX	X0d/0d
-R	///
+JX	X6.17144d/10.8d
+R	98/102/13/20
+@L	4
 END

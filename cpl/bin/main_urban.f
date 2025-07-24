@@ -355,6 +355,7 @@ c local (riv)
 
 c namelist
       character*128     c0setriv        !! setting file for river model
+      character*128     c0lndara
       namelist         /setriv/ c0qtot,   c0rivstoini,
      $                          c0rivsto, c0dis,
      $                          c0rivseq, c0rivnxl,
@@ -568,7 +569,6 @@ c in (map, irrigation)
       character*128     c1pltdoy(n0c)
       character*128     c1hvsdoy(n0c)
       character*128     c1crptyp(n0c)
-      character*128     c0lndara
       character*128     c1arafrc(n0m)
 c in (map, withdrawal)
       real              r1msrcap(n0l)

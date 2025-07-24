@@ -22,6 +22,13 @@ PSXY="gmt psxy"           # ubuntu
 ############################################################
 # Argument
 ############################################################
+LBK5="4032"
+XYBK5="48 84"
+L2XBK5=${DIRH08}/map/dat/l2x_l2y_/l2x.bk5.txt
+L2YBK5=${DIRH08}/map/dat/l2x_l2y_/l2y.bk5.txt
+LONLATBK5="98 102 13 20"
+ARGBK5="$LBK5 $XYBK5 $L2XBK5 $L2YBK5 $LONLATBK5"
+
 #ARG="$ARGCT5"; SUF=.ct5; ID=00000098
 #ARG="$ARGLN5"; SUF=.ln5; ID=00000038
 #ARG="$ARGTK5"; SUF=.tk5; ID=

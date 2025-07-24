@@ -6,7 +6,7 @@
 # Basic Settings (Edit here if you wish)
 ############################################################
 PRJ=W5E5
-RUN=LR__
+RUN=__C_
 #PRJ=AK10
 #RUN=LR__
 #PRJ=mesc

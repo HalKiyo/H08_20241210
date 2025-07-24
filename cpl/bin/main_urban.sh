@@ -10,7 +10,7 @@
 PRJ=W5E5		# Project name
 #RUN=N_C_                # Run name
 #RUN=LECD                # Run name
-RUN=N_C4                # Run name URBAN
+RUN=N_C_                # Run name URBAN
 #YEARMIN=1986
 #YEARMAX=1986
 YEARMIN=2019
@@ -130,9 +130,9 @@ DEMDOM=../../map/dat/dem_dom_/AQUASTAT20000000.full${SUF}FX # Dom wat dem URBAN 
 #DEMIND=../../map/dat/dem_ind_/AQUASTAT20000000.full2${SUF}FX # Ind wat dem URBAN full2
 #DEMDOM=../../map/dat/dem_dom_/AQUASTAT20000000.full2${SUF}FX # Dom wat dem URBAN full2
 #
-FRCGWAGR=../../map/dat/aeigfrc_/GMIA5___20050000${MAP}${SUF} # gw fraction
-FRCGWIND=../../map/dat/frc_gwi_/D12${MAP}${SUF}              # gw fraction
-FRCGWDOM=../../map/dat/frc_gwd_/D12${MAP}${SUF}              # gw fraction
+FRCGWAGR=../../map/dat/aeigfrc_/GMIA5___20050000${SUF} # gw fraction
+FRCGWIND=../../map/dat/frc_gwi_/D12${SUF}              # gw fraction
+FRCGWDOM=../../map/dat/frc_gwd_/D12${SUF}              # gw fraction
 #FRCGWAGR=../../map/dat/aeigfrc_/GMIA5___20050000${SUF} # gw fraction
 #FRCGWIND=../../map/dat/frc_gwi_/D12${SUF}              # gw fraction
 #FRCGWDOM=../../map/dat/frc_gwd_/D12${SUF}              # gw fraction
