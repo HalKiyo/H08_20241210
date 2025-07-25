@@ -10,7 +10,7 @@
 PRJ=W5E5		# Project name
 #RUN=N_C_                # Run name
 #RUN=LECD                # Run name
-RUN=N_C_                # Run name URBAN
+RUN=N_C4                # Run name URBAN
 #YEARMIN=1986
 #YEARMAX=1986
 YEARMIN=2019

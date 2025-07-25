@@ -11,20 +11,12 @@ YEAR=2000
 ############################################################
 # Geographical settings (Edit here if you change spatial domain/resolution)
 ############################################################
-L=259200
-XY="720 360"
-L2X=../../map/dat/l2x_l2y_/l2x.hlf.txt
-L2Y=../../map/dat/l2x_l2y_/l2y.hlf.txt
-LONLAT="-180 180 -90 90"
-SUF=.hlf
-
-#L=11088
-#XY="84 132"
-#L2X=../../map/dat/l2x_l2y_/l2x.ko5.txt
-#L2Y=../../map/dat/l2x_l2y_/l2y.ko5.txt
-#LONLAT="124 131 33 44"
-#SUF=.ko5
-#MAP=.SNU
+SUF=.bk5
+L=4032
+XY="48 84"
+L2X=../../map/dat/l2x_l2y_/l2x${SUF}.txt
+L2Y=../../map/dat/l2x_l2y_/l2y${SUF}.txt
+LONLAT="98 102 13 20"
 
 ############################################################
 # Input (Do not edit here unless you are an expert)

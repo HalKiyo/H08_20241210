@@ -1,19 +1,3 @@
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-c Copyright (c) 2023 Dr. Naota HANASAKI, NIES
-c
-c Licensed under the Apache License, Version 2.0 (the "License");
-c   You may not use this file except in compliance with the License.
-c   You may obtain a copy of the License at:
-c
-c     http://www.apache.org/licenses/LICENSE-2.0
-c
-c Unless required by applicable law or agreed to in writing, software
-c distributed under the License is distributed on an "AS IS" BASIS,
-c WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
-c either express or implied.
-c See the License for the specific language governing permissions and
-c limitations under the License.
-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
        program main
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 cto   run crop model to estimate crop calendar
@@ -27,12 +11,8 @@ c parameter (array)
       integer           n0ram              !! Crop type (Leff et al., 2004)
       integer           n0doy
       integer           n0t
-      parameter        (n0lall=720*360) 
-      parameter        (n0llnd=67209)
-c      parameter        (n0lall=180*180)
-c      parameter        (n0llnd=13105)
-c      parameter        (n0lall=84*132) 
-c      parameter        (n0llnd=5793) 
+      parameter        (n0lall=4032) 
+      parameter        (n0llnd=2295) 
       parameter        (n0swim=71) 
       parameter        (n0ram=19) 
       parameter        (n0doy=366) 

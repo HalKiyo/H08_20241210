@@ -7,23 +7,15 @@
 ############################################################
 # Basic settings (Choose one)
 ############################################################
-JOBS="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19"
-#JOBS="2nd"
+#JOBS="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19"
+JOBS="2nd"
 ############################################################
 # Basic settings (Edit here if you change settings)
 ############################################################
-PRJ=WFDE
+PRJ=W5E5
 RUN=__C_
-#PRJ=AK10
-#RUN=LR__
-#RUN=__C_
-PRJMET=wfde           # for Global 2018
-RUNMET=____           # for Global 2018
-#PRJMET=AMeD          # for Kyusyu 2022
-#RUNMET=AS1_          # for Kyusyu 2022
-YEAR=0000
-LDBG=27641            # Debugging point (L coordinate)
-#LDBG=5734
+YEAR=2019
+LDBG=150            # Debugging point (L coordinate)
 ############################################################
 # Basic settings (Do not edit here basically)
 ############################################################
@@ -35,18 +27,9 @@ PROG=main             # Program: No need to change!
 # Note that L (n0l) is prescribed in main.f. You also need to
 # edit main.f and re-compile it.)
 ############################################################
-L=259200
-SUF=.hlf
-MAP=.WFDEI
-
-#L=11088       # for Korean peninsula 2018
-#SUF=.ko5
-#MAP=.SNU
-
-#L=32400        # for Kyusyu 2022
-#SUF=.ks1
-#MAP=.kyusyu
-
+L=4032
+SUF=.bk5
+MAP=.CAMA
 ############################################################
 # Input (Edit here if you change settings)
 #
@@ -60,11 +43,11 @@ MAP=.WFDEI
 #    This is better for virtual water calculation, because ...
 #
 ############################################################
-   TAIR=../../met/dat/Tair____/${PRJMET}${RUNMET}${SUF}DY
- SWDOWN=../../met/dat/SWdown__/${PRJMET}${RUNMET}${SUF}DY
-POTEVAP=../../lnd/out/PotEvap_/${PRJ}LR__${SUF}DY
-#POTEVAP=../../lnd/out/PotEvap_/${PRJ}NR__${SUF}DY  # see above note
-   EVAP=../../lnd/out/Evap____/${PRJ}LR__${SUF}DY
+   TAIR=../../met/dat/Tair____/W5E5____${SUF}DY
+ SWDOWN=../../met/dat/SWdown__/W5E5____${SUF}DY
+POTEVAP=../../lnd/out/PotEvap_/W5E5LR__${SUF}DY
+#POTEVAP=../../lnd/out/PotEvap_/W5E5NR__${SUF}DY  # see above note
+   EVAP=../../lnd/out/Evap____/W5E5LR__${SUF}DY
 ############################################################
 # Climate change input (Edit here if you change settings)
 ############################################################
@@ -80,10 +63,8 @@ TAIROUT=NO
 ############################################################
 # Map (Edit here if you change settings)
 ############################################################
-LNDMSK=../../map/dat/lnd_msk_/lndmsk${MAP}${SUF}
+   LNDMSK=../../map/dat/lnd_msk_/lndmsk${MAP}${SUF}
 CRPTYP2ND=../../map/out/crp_typ2/M08_____20000000${SUF} # only for JOB=2nd
-#CRPTYP1ST=../../map/org/KYUSYU/crp_typ_first${SUF}
-#CRPTYP2ND=../../map/org/KYUSYU/crp_typ_second${SUF} # only for KYUSYU JOB=2nd   
 ############################################################
 # Initial value (Do not edit here basically)
 ############################################################

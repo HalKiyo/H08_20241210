@@ -5,20 +5,20 @@
 ############################################################
 # Basic settings (Edit here if you change settings)
 ############################################################
-PRJ=WFDE             # Project name
+PRJ=W5E5             # Project name
 RUN=__C_             # Run name
 #PRJ=AK10
 #RUN=LR__
 #RUN=__C_
-YEAR=0000            # Year
+YEAR=2019            # Year
 MON=00               # Month
 DAY=00               # Day
 MARGIN=15            # Margins between croppings [day]
 ############################################################
 # Geographical settings (Edit here if you change spatial domain/resolution)
 ############################################################
-L=259200              
-SUF=.hlf             
+L=4032              
+SUF=.bk5             
 
 #L=11088      # for Korean peninsula 2018
 #SUF=.ko5

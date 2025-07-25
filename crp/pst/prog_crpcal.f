@@ -32,7 +32,7 @@ c temporary
 c in (set)
       integer              i0margin             !! days of fallow
       integer              i0ldbg
-      data                 i0ldbg/57261/
+      data                 i0ldbg/150/
 c      data                 i0ldbg/13105/ 
 c in (map)
       integer,allocatable::i1crptyp1st(:)       !! 1st crop type

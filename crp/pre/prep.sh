@@ -5,12 +5,12 @@
 ############################################################
 # Geographical settings (Edit here if you change spatial domain/resolution)
 ############################################################
-L=259200
-XY="720 360"
-L2X=../../map/dat/l2x_l2y_/l2x.hlf.txt
-L2Y=../../map/dat/l2x_l2y_/l2x.hlf.txt
-LONLAT="-180 180 -90 90"
-SUF=.hlf
+L=4032
+XY="48 84"
+SUF=.bk5
+L2X=../../map/dat/l2x_l2y_/l2x${SUF}.txt
+L2Y=../../map/dat/l2x_l2y_/l2x${SUF}.txt
+LONLAT="98 102 13 20"
 
 #####################
 # Regional settings 
@@ -34,17 +34,17 @@ SUF=.hlf
 ############################################################
 # Basic settings (Edit here if you wish)
 ############################################################
-PRJSIM=WFDE             # Project name of simulation
+PRJSIM=W5E5             # Project name of simulation
 RUNSIM=LR__             # Run     name of simulation
-PRJMET=wfde             # Project name of meteorological input
+PRJMET=W5E5             # Project name of meteorological input
 RUNMET=____             # Run     name of meteorological input
 #PRJSIM=AK10
 #RUNSIM=LR__
 #PRJMET=AMeD
 #RUNMET=AS1_
 #
-YEARMIN=1979
-YEARMAX=1979
+YEARMIN=2019
+YEARMAX=2019
 #YEARMIN=2014
 #YEARMAX=2014
 YEAROUT=0000

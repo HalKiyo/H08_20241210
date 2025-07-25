@@ -5,38 +5,25 @@
 ############################################################
 # Geographical settings (Edit here if you change spatial domain/resolution)
 ############################################################
-L=259200
-XY="720 360"
-L2X=../../map/dat/l2x_l2y_/l2x.hlf.txt
-L2Y=../../map/dat/l2x_l2y_/l2y.hlf.txt
-LONLAT="-180 180 -90 90"
+SUF=.bk5
+L=4032
+XY="48 82"
+L2X=../../map/dat/l2x_l2y_/l2x${SUF}.txt
+L2Y=../../map/dat/l2x_l2y_/l2y${SUF}.txt
+LONLAT="98 102 13 20"
 ARG="$L $XY $L2X $L2Y $LONLAT"
-SUF=.hlf
-MAP=.WFDEI
-
-#L=11088
-#XY="84 132"
-#L2X=../../map/dat/l2x_l2y_/l2x.ko5.txt
-#L2Y=../../map/dat/l2x_l2y_/l2y.ko5.txt
-#LONLAT="124 131 33 44"
-#ARG="$L $XY $L2X $L2Y $LONLAT"
-#SUF=.ko5
-#MAP=.SNU
+MAP=.CAMA
 
 ############################################################
 # Basic setting (Edit here if you wish)
 ############################################################
 OPT="double"     # double or single
-YEARMIN=2000; YEARMAX=2000; PRJRUNOUT=S05_____
+PRJRUNOUT=S05_____
+YEAR=2000
 
 ############################################################
 # Input (Edit here if you wish)
 ############################################################
-YEAR=$YEARMIN
-while [ $YEAR -le $YEARMAX ]; do
-echo
-echo $YEAR
-echo
 IRGARA=../../map/dat/irg_ara_/S05_____${YEAR}0000${SUF}  # Irrigated area
 IRGEFF=../../map/dat/irg_eff_/DS02____00000000${SUF}  # Irrigat. effic.
 CRPINT=../../map/dat/crp_int_/DS02____00000000${SUF}  # Crop intensity
@@ -155,6 +142,3 @@ elif [ $OPT = "single" ]; then
   echo Non-crop area fraction max: `htstat $ARG max $NONFRC` >> $LOG
   echo Non-crop area fraction min: `htstat $ARG min $NONFRC` >> $LOG
 fi
-
-  YEAR=`expr $YEAR + 1`
-done
