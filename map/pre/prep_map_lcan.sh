@@ -8,23 +8,21 @@
 # option "within":  origin and destination are in the same basin.
 #        "nolimit": not necessarily in the same basin.
 ############################################################
-L=259200
-XY="720 360"
-L2X=${DIRH08}/map/dat/l2x_l2y_/l2x.hlf.txt
-L2Y=${DIRH08}/map/dat/l2x_l2y_/l2y.hlf.txt
-LONLAT="-180 180 -90 90"
-SUF=.hlf
-MAP=.WFDEI
+SUF=.bk5
+L=4032
+XY="48 84"
+L2X=${DIRH08}/map/dat/l2x_l2y_/l2x${SUF}.txt
+L2Y=${DIRH08}/map/dat/l2x_l2y_/l2y${SUF}.txt
+LONLAT="98 102 13 20"
+MAP=.CAMA
 ARG="$L $XY $L2X $L2Y $LONLAT"
 #
 OPT=within          # within or nolimit
 MAX=1               # maximum distance of implicit canal
 #
-CANSUF=.binhlf # suffix for canal (.bin+SUF)
 ############################################################
 # in (edit here )
 ############################################################
-ELVMINORG=../../map/org/K14/ETOPO1__00000000.hlf.txt
 #
 RIVNUM=../../map/out/riv_num_/rivnum${MAP}${SUF}
 RIVARA=../../map/out/riv_ara_/rivara${MAP}${SUF}
@@ -34,7 +32,7 @@ RIVNXL=../../map/out/riv_nxl_/rivnxl${MAP}${SUF}
 # out
 ############################################################
 DIRELVMIN=../../map/dat/elv_min_
-ELVMIN=${DIRELVMIN}/ETOPO1__00000000${SUF}
+ELVMIN=${DIRELVMIN}/elevtn${MAP}${SUF}
 #
 DIRCANORG=../../map/out/can_org_   # origin of canal water
 DIRCANDES=../../map/out/can_des_   # destination of canal water
@@ -43,7 +41,7 @@ DIRCANCNT=../../map/out/can_cnt_   # counter
 XCANORG=$DIRCANORG/canorg.x.${OPT}.${MAX}${MAP}${SUF}
 YCANORG=$DIRCANORG/canorg.y.${OPT}.${MAX}${MAP}${SUF}
 LCANORG=$DIRCANORG/canorg.l.${OPT}.${MAX}${MAP}${SUF}
-LCANDES=$DIRCANDES/candes.l.${OPT}.${MAX}${MAP}${CANSUF}
+LCANDES=$DIRCANDES/candes.l.${OPT}.${MAX}${MAP}${SUF}
 CANSCO=$DIRCANSCO/cansco.${OPT}.${MAX}${MAP}${SUF}
 CANCNT=$DIRCANCNT/cancnt.${OPT}.${MAX}${MAP}${SUF}
 #
@@ -60,8 +58,6 @@ if [ ! -d $DIRCANCNT ]; then  mkdir $DIRCANCNT; fi
 ############################################################
 # job
 ############################################################
-htformat $ARGHLF asciiu binary ${ELVMINORG} ${ELVMIN}
-
 prog_map_lcan $ARG $ELVMIN $RIVNUM $RIVARA $RIVSEQ $RIVNXL $LCANORG $XCANORG $YCANORG $CANSCO $CANCNT $MAX $OPT $LCANDES > $LOG
 #############################################################
 # check
@@ -69,8 +65,8 @@ prog_map_lcan $ARG $ELVMIN $RIVNUM $RIVARA $RIVSEQ $RIVNXL $LCANORG $XCANORG $YC
 FILES="$XCANORG $YCANORG $LCANORG $LCANDES $CANSCO $CANCNT"
 for FILE in $FILES; do
   echo $FILE >> $LOG
-  echo Sum `htstat $ARGHLF sum $FILE` >> $LOG
-  echo Max `htstat $ARGHLF max $FILE` >> $LOG
-  echo Min `htstat $ARGHLF min $FILE` >> $LOG
+  echo Sum `htstat $ARG sum $FILE` >> $LOG
+  echo Max `htstat $ARG max $FILE` >> $LOG
+  echo Min `htstat $ARG min $FILE` >> $LOG
 done
 echo Log: $LOG

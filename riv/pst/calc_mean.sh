@@ -5,12 +5,12 @@
 ############################################################
 # Geographical settings (Edit here if you change spatial domain/resolution)
 ############################################################
-L=259200
-XY="720 360"
-L2X=../../map/dat/l2x_l2y_/l2x.hlf.txt
-L2Y=../../map/dat/l2x_l2y_/l2y.hlf.txt
-LONLAT="-180 180 -90 90"
-SUF=.hlf
+SUF=.bk5
+L=4032
+XY="48 82"
+L2X=../../map/dat/l2x_l2y_/l2x${SUF}.txt
+L2Y=../../map/dat/l2x_l2y_/l2y${SUF}.txt
+LONLAT="98 102 13 20"
 
 #L=11088                   # for Korean peninsula 2018
 #XY="84 132"
@@ -29,12 +29,12 @@ SUF=.hlf
 ############################################################
 # Settings (Edit here)
 ############################################################
-PRJ=WFDE      # project name of river discharge simulation
+PRJ=W5E5      # project name of river discharge simulation
 RUN=LR__      # project name of river discharge simulation
 #PRJ=AK10
 #RUN=LR__
-YEARMIN=1979
-YEARMAX=1979
+YEARMIN=2019
+YEARMAX=2019
 #YEARMIN=2014
 #YEARMAX=2014
 YEAROUT=0000

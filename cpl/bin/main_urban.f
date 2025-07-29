@@ -36,7 +36,6 @@ c      parameter        (n0l=1296)
 c      parameter        (n0l=1728)
 c      parameter        (n0l=2304)
       parameter        (n0l=4032)
-c      parameter        (n0l=5184)
       parameter        (n0t=3) 
       parameter        (n0m=4) 
       parameter        (n0c=2) 
@@ -127,6 +126,8 @@ c in (file: map of lnd)
       real              r1rgwtau(n0l)     !! tau for groundwater [dy]
       real              r1rgwrcf(n0l)     !! groundwater recharge fraction [-]
       real              r1rgwrcmax(n0l)!! maximum recharge
+      character*128     c0optpara
+      parameter        (c0optpara='NO')
       character*128     c0lndmsk
       character*128     c0soildepth
       character*128     c0w_fieldcap
@@ -1228,6 +1229,10 @@ c
 c urban start
       if(c0ctydrn.ne.'NO')then
         call read_binary(n0l,c0ctydrn,r1ctydrn)
+        write(*,*) 'loaded'
+        do i0l=1,n0l
+          write(*,*) i0l,r1ctydrn(i0l)
+        end do
       else
         do i0l=1,n0l
           r1ctydrn(i0l)=i0l
@@ -1907,6 +1912,7 @@ c
      $               n0l,
      $               i0secint,     i0ldbg,     i0cntc,     r0engbalc,
      $               r0watbalc,
+     $               c0optpara,
      $               i1lndmsk,     r1soildepth2,r1w_fieldcap,r1w_wilt,
      $               r1rgwdepth,    r1w_rgwyield,
      $               r1cg,         r1cd2,

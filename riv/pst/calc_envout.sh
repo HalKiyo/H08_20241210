@@ -5,24 +5,24 @@
 ############################################################
 # Basic settings (Edit here if you change settings)
 ############################################################
-PRJ=WFDE
+PRJ=W5E5
 RUN=LR__
 #PRJ=AK10
 #RUN=LR__
 YEARMIN=0000
 YEARMAX=0000
-LDBG=27641
+LDBG=150
 #LDBG=5734
 ############################################################
 # Geographical settings (Edit here if you change spatial domain/resolution)
 ############################################################
-L=259200
-XY="720 360"
-L2X=../../map/dat/l2x_l2y_/l2x.hlf.txt
-L2Y=../../map/dat/l2x_l2y_/l2y.hlf.txt
-LONLAT="-180 180 -90 90"
-SUF=.hlf
-MAP=.WFDEI
+SUF=.bk5
+L=4032
+XY="48 84"
+L2X=../../map/dat/l2x_l2y_/l2x${SUF}.txt
+L2Y=../../map/dat/l2x_l2y_/l2y${SUF}.txt
+LONLAT="98 102 13 20"
+MAP=.CAMA
 
 #L=11088           # for Korean peninsula 2018
 #XY="84 132"
@@ -44,7 +44,8 @@ MAP=.WFDEI
 # Input (Do not edit here basically)
 ############################################################
 LNDARA=../../map/dat/lnd_ara_/lndara${MAP}${SUF}
-FLWDIR=../../map/dat/flw_dir_/flwdir${MAP}${SUF}
+#FLWDIR=../../map/dat/flw_dir_/flwdir${MAP}${SUF}
+RIVMOU=../../map/out/riv_mou_/rivmou${MAP}${SUF}
 RIVARA=../../map/out/riv_ara_/rivara${MAP}${SUF}
 ############################################################
 # Input (Do not edit here basically)
@@ -83,8 +84,8 @@ httime $L $ENVOUT     $YEARMIN $YEARMAX $ENVOUTYEAR
 htmean $L $ENVOUT     $YEARMIN $YEARMAX 0000 
 htmean $L $ENVOUTYEAR $YEARMIN $YEARMAX 0000 
 
-htmask $L $XY $L2X $L2Y $LONLAT ${DIRRIVOUT}/${PRJ}${RUN}${YEARMIN}0000${SUF} $FLWDIR eq 9 temp${SUF}
-htmask $L $XY $L2X $L2Y $LONLAT ${DIRENVOUT}/${PRJ}${RUN}${YEARMIN}0000${SUF} $FLWDIR eq 9 temp${SUF}
+htmask $L $XY $L2X $L2Y $LONLAT ${DIRRIVOUT}/${PRJ}${RUN}${YEARMIN}0000${SUF} $RIVMOU eq 9 temp${SUF}
+htmask $L $XY $L2X $L2Y $LONLAT ${DIRENVOUT}/${PRJ}${RUN}${YEARMIN}0000${SUF} $RIVMOU eq 9 temp${SUF}
 ############################################################
 # Job (Draw)
 ############################################################

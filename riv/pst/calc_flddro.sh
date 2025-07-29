@@ -5,13 +5,13 @@
 ############################################################
 # Basic settings (Edit here)
 ############################################################
-PRJ=WFDE          #
+PRJ=W5E5          #
 RUN=LR__          #
 #PRJ=AK10
 #RUN=LR__
 YEARMIN=0000      #
 YEARMAX=0000      #
-LDBG=27641        #
+LDBG=150        #
 #LDBG=5734
 PROG=prog_flddro  #
 #
@@ -19,8 +19,8 @@ LOG=temp.log
 ############################################################
 # Geographical settings (Edit here if you change spatial domain/resolution)
 ############################################################
-L=259200          #
-SUF=.hlf          #
+L=4032          #
+SUF=.bk5          #
 
 #L=11088           # for Korean peninsula 2018
 #SUF=.ko5

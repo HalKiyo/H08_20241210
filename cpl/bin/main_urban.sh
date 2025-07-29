@@ -8,15 +8,12 @@
 # Basic settings (Edit here if you like)
 ############################################################
 PRJ=W5E5		# Project name
-#RUN=N_C_                # Run name
-#RUN=LECD                # Run name
-RUN=N_C4                # Run name URBAN
-#YEARMIN=1986
-#YEARMAX=1986
+RUN=N_C_                # Run name URBAN
 YEARMIN=2019
 YEARMAX=2019
 SECINT=86400            # interval
-#LDBG=80076              # debugging point (high plains)
+MAX=1
+#
 PRJMET=W5E5
 RUNMET=____
 PRJLR__=W5E5
@@ -222,8 +219,8 @@ OPTRGW=yes
 #
 # aqueduct settings shown in Hanasaki et al. 2018 
 #
-LCAN=../../map/out/can_des_/candes.l.merged.5${MAP}.bin
-LCAN=../../map/out/can_des_/candes.l.explicit${MAP}.bin
+#LCAN=../../map/out/can_des_/candes.l.explicit${MAP}.bin
+LCAN=../../map/out/can_des_/candes.l.merged.${MAX}${MAP}${SUF}
 ############################################################
 # Input for water efficiency 1 (Edit here if you wish)
 ############################################################

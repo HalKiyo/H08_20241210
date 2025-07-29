@@ -10,7 +10,7 @@ DIRRIV  = ../../riv/bin/
 DIRDAM  = ../../dam/bin/
 DIRCRP  = ../../crp/bin/
 DIRCPL  = ../../cpl/bin/
-OBJS    = main calc_irgapp_hyper.o main_hyper main_dyn main_urban
+OBJS    = main main_urban
 ############################################################
 #	Macro (Settings)
 ############################################################

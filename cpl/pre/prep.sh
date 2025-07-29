@@ -5,26 +5,16 @@
 ############################################################
 # Geographical settings (Edit here if you change spatial domain/resolution)
 ############################################################
-L=259200
-XY="720 360"
-L2X=../../map/dat/l2x_l2y_/l2x.hlf.txt
-L2Y=../../map/dat/l2x_l2y_/l2y.hlf.txt
-LONLAT="-180 180 -90 90"
-SUF=.hlf
-CANSUF=.binhlf      # suffix for canal (.bin+SUF)
-MAP=.WFDEI
-
-#L=11088
-#XY="84 132"
-#LONLAT="124 131 33 44"
-#L2X=../../map/dat/l2x_l2y_/l2x.ko5.txt
-#L2Y=../../map/dat/l2x_l2y_/l2y.ko5.txt
-#SUF=.ko5
-#CANSUF=.binko5
-#MAP=.SNU
+SUF=.bk5
+L=4032
+XY="48 84"
+L2X=../../map/dat/l2x_l2y_/l2x${SUF}.txt
+L2Y=../../map/dat/l2x_l2y_/l2y${SUF}.txt
+LONLAT="98 102 13 20"
+MAP=.CAMA
 
 #
-L10=2592000                             # 10 times of L
+L10=40320                             # 10 times of L
 #L10=110880
 ############################################################
 # Input (Do not edit here basically)
@@ -44,7 +34,7 @@ DUMMY2=${DIRDAMDAT}/uniform.0.1${SUF}
 DUMMY3=${DIRDAMDAT}/uniform.0.15${SUF}
 DUMMY4=${DIRDAMDAT}/uniform.0.5${SUF}
 DUMMY5=${DIRDAMDAT}/uniform.1.0${SUF}
-CANDAT=${DIRDAMDAT}/uniform.0.0${CANSUF}
+CANDAT=${DIRDAMDAT}/uniform.0.0${SUF}
 ############################################################
 # Job (prepare directory)
 ############################################################

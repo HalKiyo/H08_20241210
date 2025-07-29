@@ -25,10 +25,10 @@ c
       integer           n0rec         !! # of cells to deliver water
       integer           n0recout      !! to output
       real              p0mis
-      parameter        (n0l=259200)
+      parameter        (n0l=4032)
 c      parameter        (n0l=32400)    !! for Kyusyu (.ks1)
-      parameter        (n0rec=20) 
-      parameter        (n0recout=20)  !! must be equal to n0rec
+      parameter        (n0rec=120) 
+      parameter        (n0recout=120)  !! must be equal to n0rec
       parameter        (p0mis=1.0E20) 
 c index
       integer           i0l
@@ -69,7 +69,7 @@ c
       integer           i1id2lorg(n0l)   !! converter id --> l or origin
       integer           i1id2seq(n0l) !! converter id --> sequence
       integer           i0ldbg
-      data              i0ldbg/7468/ 
+      data              i0ldbg/150/ 
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc 
 c argument
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc 

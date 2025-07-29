@@ -30,7 +30,7 @@ c
       real              p0latmin
       real              p0latmax
 c     parameter        (n0recmax=10)
-      parameter        (n0recmax=20) 
+      parameter        (n0recmax=120) 
 c index
       integer           i0l
       integer           i0x

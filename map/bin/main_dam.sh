@@ -5,22 +5,22 @@
 ############################################################
 # Basic settings (Edit here)
 ############################################################
-PRJ=H06_; RUN=____              # PRJ/RUN for dam_cov/dam_gov
-PRJ=GRan; RUN=D_L_              # PRJ/RUN for dam_cov/dam_gov
+#PRJ=H06_; RUN=____              # PRJ/RUN for dam_cov/dam_gov
+PRJ=GRan; RUN=D_M_              # PRJ/RUN for dam_cov/dam_gov
 
 #PRJ=KYSY; RUN=____
 #PRJDIS=AK10
 #RUNDIS=LR__
 
-PRJDIS=WFDE                     # Project name for discharge simulation
+PRJDIS=W5E5                     # Project name for discharge simulation
 RUNDIS=LR__                     # Run name for discharge simulation
-YEARDAMMIN=2000                    # Dams completed by this year is included
-YEARDAMMAX=2000                    # Dams completed by this year is included
+YEARDAMMIN=2019                    # Dams completed by this year is included
+YEARDAMMAX=2019                    # Dams completed by this year is included
 #YEARDAMMIN=1968
 #YEARDAMMAX=1968
 YEARDIS=0000                    # Discharge simulation of this year is used
 CNTMAX=10                       # maximum downstream grid cells
-DAMDBG=5140                     # Debugging dam 
+DAMDBG=150                     # Debugging dam 
 #DAMDBG=9119
 ############################################################
 # Macro (Do not edit here unless you are an expert)
@@ -32,9 +32,9 @@ RECMAX=983                      # max records for GRanD L
 ############################################################
 # Geographical settings (Edit here if you change spatial domain/resolution)
 ############################################################
-L=259200                        # Total num of grid cells
-SUF=.hlf                        # Suffix
-MAP=.WFDEI                      # Map
+L=4032                        # Total num of grid cells
+SUF=.bk5                        # Suffix
+MAP=.CAMA                      # Map
 
 #L=11088                  # for Korean peninsula 2018
 #SUF=.ko5
