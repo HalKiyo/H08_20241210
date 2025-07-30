@@ -241,8 +241,12 @@ c
           i0flg=0
           do i0num=1,i0nummax
             if(int(r1rivnum(i0l)).eq.i0num)then
-              r1ctydrn(i0l)=i1num2drn(i0num)
-              i0flg=1 
+               if (i1num2drn(i0num) .ne. 0) then
+                  r1ctydrn(i0l)=i1num2drn(i0num)
+                  i0flg=1 
+               else
+                  i0flg = 0
+               end if
             end if
           end do
           if(i0flg.eq.0)then
@@ -250,9 +254,6 @@ c
               r1maxara(int(r1rivnum(i0l)))=r1rivara(i0l)
               r1maxpnt(int(r1rivnum(i0l)))=real(i0l)
             end if
-            write(*,*) 'urban not drained:',i0l,r1rivnum(i0l),
-     &           r1rivara(i0l),r1maxara(int(r1rivnum(i0l))),
-     &           r1maxpnt(int(r1rivnum(i0l)))       
           end if
         end if
       end do
@@ -262,7 +263,11 @@ c
           i0flg=0
           do i0num=1,i0nummax
             if(int(r1rivnum(i0l)).eq.i0num)then
-              i0flg=1 
+               if (i1num2drn(i0num) .ne. 0) then
+                  i0flg=1 
+               else
+                  i0flg = 0
+               end if
             end if
           end do
           if(i0flg.eq.0)then
@@ -270,6 +275,7 @@ c
             write(*,*) 'urban drained:',i0l,r1rivnum(i0l),
      &            r1ctydrn(i0l)
           end if
+          write(*,*) 'Debug: After i0num loop, i0l=', i0l, r1ctydrn(i0l)
         end if
       end do      
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc

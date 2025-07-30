@@ -2337,49 +2337,58 @@ c urban end
               end do
 d             write(*,*) 'main r1supdom ',r1supdom(i0ldbg)
 c
-              r1rivinf=0.0
-              do i0l=1,n0l
-                i0rivnxl=int(r1rivnxl(i0l))
-                if(i0l.ne.i0rivnxl)then
-                  if(r1rtfagr(i0l).ne.p0mis.and.i0rivnxl.ne.0)then
-                    r1rivinf(i0rivnxl)
-     $             =r1rivinf(i0rivnxl)+r1rtfagr(i0l)
-                  end if
-                else
-                  if(r1rtfagr(i0l).ne.p0mis)then
-                    r1rivout(i0l)
-     $             =r1rivout(i0l)+r1rtfagr(i0l)
-                  end if                  
-                end if
-              end do
-              do i0l=1,n0l
-                i0rivnxl=int(r1rivnxl(i0l))
-                if(i0l.ne.i0rivnxl)then
-                  if(r1rtfind(i0l).ne.p0mis.and.i0rivnxl.ne.0)then
-                    r1rivinf(i0rivnxl)
-     $             =r1rivinf(i0rivnxl)+r1rtfind(i0l)
-                  end if
-                else
-                  if(r1rtfind(i0l).ne.p0mis)then
-                    r1rivout(i0l)
-     $             =r1rivout(i0l)+r1rtfind(i0l)
-                  end if
-                end if
-              end do
-              do i0l=1,n0l
-                i0rivnxl=int(r1rivnxl(i0l))
-                if(i0l.ne.i0rivnxl)then
-                  if(r1rtfdom(i0l).ne.p0mis.and.i0rivnxl.ne.0)then
-                    r1rivinf(i0rivnxl)
-     $             =r1rivinf(i0rivnxl)+r1rtfdom(i0l)
-                  end if
-                else
-                  if(r1rtfdom(i0l).ne.p0mis)then
-                    r1rivout(i0l)
-     $             =r1rivout(i0l)+r1rtfdom(i0l)
-                  end if
-                end if
-              end do
+                    r1rivinf = 0.0
+
+                    do i0l = 1, n0l
+                      if (r1rivnxl(i0l) .ne. p0mis) then
+                        i0rivnxl = int(r1rivnxl(i0l))
+                        if (i0l .ne. i0rivnxl) then
+        if (r1rtfagr(i0l).ne.p0mis.and.i0rivnxl.ne.0) then
+          r1rivinf(i0rivnxl) =
+     &    r1rivinf(i0rivnxl) + r1rtfagr(i0l)
+                          endif
+                        else
+                          if (r1rtfagr(i0l) .ne. p0mis) then
+                          r1rivout(i0l) =
+     &                    r1rivout(i0l) + r1rtfagr(i0l)
+                          endif
+                        endif
+                      endif
+                    end do
+
+                    do i0l = 1, n0l
+                      if (r1rivnxl(i0l) .ne. p0mis) then
+                        i0rivnxl = int(r1rivnxl(i0l))
+                        if (i0l .ne. i0rivnxl) then
+        if (r1rtfind(i0l) .ne. p0mis .and. i0rivnxl .ne. 0) then
+                            r1rivinf(i0rivnxl) =
+     &                      r1rivinf(i0rivnxl) + r1rtfind(i0l)
+                          endif
+                        else
+                          if (r1rtfind(i0l) .ne. p0mis) then
+                            r1rivout(i0l) =
+     &                      r1rivout(i0l) + r1rtfind(i0l)
+                          endif
+                        endif
+                      endif
+                    end do
+
+                    do i0l = 1, n0l
+                      if (r1rivnxl(i0l) .ne. p0mis) then
+                        i0rivnxl = int(r1rivnxl(i0l))
+                        if (i0l .ne. i0rivnxl) then
+        if (r1rtfdom(i0l) .ne. p0mis .and. i0rivnxl .ne. 0) then
+                            r1rivinf(i0rivnxl) =
+     &                      r1rivinf(i0rivnxl) + r1rtfdom(i0l)
+                          endif
+                        else
+                          if (r1rtfdom(i0l) .ne. p0mis) then
+                            r1rivout(i0l) =
+     &                      r1rivout(i0l) + r1rtfdom(i0l)
+                          endif
+                        endif
+                      endif
+                    end do
 c
               do i0l=1,n0l
                 r1rivsto_pr(i0l)=r1rivsto(i0l)
@@ -2415,26 +2424,36 @@ c     debug hanasaki
                write(*,*) 'rgw(i0l,0,i0m+1) ',r3rgw(i0l,0,i0m+1)
                write(*,*) '-----'
               continue          
-            else if(i0m+2.le.n0m.and.r2arafrc(i0l,i0m+2).gt.0.0)then
+            else if(i0m+2.le.n0m)then
+              if(r2arafrc(i0l,i0m+2).gt.0.0)then
                       r3rgw(i0l,0,i0m+2)=r3rgw(i0l,0,i0m+2)
      $               +min(0.0,r3rgw(i0l,0,i0m))
      $               *r2arafrc(i0l,i0m)/r2arafrc(i0l,i0m+2)
-            else if(i0m+3.le.n0m.and.r2arafrc(i0l,i0m+3).gt.0.0)then
+              end if
+            else if(i0m+3.le.n0m)then
+              if(r2arafrc(i0l,i0m+3).gt.0.0)then
                       r3rgw(i0l,0,i0m+3)=r3rgw(i0l,0,i0m+3)
      $               +min(0.0,r3rgw(i0l,0,i0m))
      $               *r2arafrc(i0l,i0m)/r2arafrc(i0l,i0m+3)
-            else if(i0m+4.le.n0m.and.r2arafrc(i0l,i0m+4).gt.0.0)then
+              end if
+            else if(i0m+4.le.n0m)then
+              if(r2arafrc(i0l,i0m+4).gt.0.0)then
                       r3rgw(i0l,0,i0m+4)=r3rgw(i0l,0,i0m+4)
      $               +min(0.0,r3rgw(i0l,0,i0m))
      $               *r2arafrc(i0l,i0m)/r2arafrc(i0l,i0m+4)
-            else if(i0m+5.le.n0m.and.r2arafrc(i0l,i0m+5).gt.0.0)then
+              end if
+            else if(i0m+5.le.n0m)then
+              if(r2arafrc(i0l,i0m+5).gt.0.0)then
                       r3rgw(i0l,0,i0m+5)=r3rgw(i0l,0,i0m+5)
      $               +min(0.0,r3rgw(i0l,0,i0m))
      $               *r2arafrc(i0l,i0m)/r2arafrc(i0l,i0m+5)
-            else if(i0m+1.le.n0m.and.r2arafrc(i0l,i0m+1).eq.0.0)then
+              end if
+            else if(i0m+1.le.n0m)then
+              if(r2arafrc(i0l,i0m+1).gt.0.0)then
                       r3rgw(i0l,0,i0m+1)=r3rgw(i0l,0,i0m+1)
      $               +min(0.0,r3rgw(i0l,0,i0m))
      $               *r2arafrc(i0l,i0m)/1e-10
+              end if
 
             else
                       write(*,*) 'need more lines in cpl/bin/main.f1'

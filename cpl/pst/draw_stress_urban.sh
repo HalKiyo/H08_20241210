@@ -10,14 +10,14 @@ OPTTR=TR
 OPTTT=ST
 OPTTR=SR
 
-L=32400
-XY="180 180"
-L2X=../../map/dat/l2x_l2y_/l2x.ks1.txt
-L2Y=../../map/dat/l2x_l2y_/l2y.ks1.txt
-LONLAT="129 132 31 34"
+L=4032
+XY="48 84"
+SUF=.bk5
+L2X=../../map/dat/l2x_l2y_/l2x${SUF}.txt
+L2Y=../../map/dat/l2x_l2y_/l2y${SUF}.txt
+LONLAT="98 102 13 20"
 ARG="$L $XY $L2X $L2Y $LONLAT"
-SUF=.ks1
-MAP=.kyusyu
+MAP=.CAMA
 #
 #L=14400                    # for Naka and Kuji river 
 #XY="120 120"
@@ -28,13 +28,14 @@ MAP=.kyusyu
 #SUF=.nk1
 #MAP=.NakaKuji
 #
-L=1296; XY="$LCT5"; LONLAT="$LONLATCT5"; ARG="$ARGCT5"; SUF=.ct5; ID=00000098
-L=1728; XY="$LCN5"; LONLAT="$LONLATCN5"; ARG="$ARGCN5"; SUF=.cn5; ID=00000032
-L=1728; XY="$LLN5"; LONLAT="$LONLATLN5"; ARG="$ARGLN5"; SUF=.ln5; ID=00000038
-L=1728; XY="$LTK5"; LONLAT="$LONLATTK5"; ARG="$ARGTK5"; SUF=.tk5
-L=2304; XY="$LLA5"; LONLAT="$LONLATLA5"; ARG="$ARGLA5"; SUF=.la5; ID=00000017
-L=4032; XY="$LRJ5"; LONLAT="$LONLATRJ5"; ARG="$ARGRJ5"; SUF=.rj5; ID=00000016
+#L=1296; XY="$LCT5"; LONLAT="$LONLATCT5"; ARG="$ARGCT5"; SUF=.ct5; ID=00000098
+#L=1728; XY="$LCN5"; LONLAT="$LONLATCN5"; ARG="$ARGCN5"; SUF=.cn5; ID=00000032
+#L=1728; XY="$LLN5"; LONLAT="$LONLATLN5"; ARG="$ARGLN5"; SUF=.ln5; ID=00000038
+#L=1728; XY="$LTK5"; LONLAT="$LONLATTK5"; ARG="$ARGTK5"; SUF=.tk5
+#L=2304; XY="$LLA5"; LONLAT="$LONLATLA5"; ARG="$ARGLA5"; SUF=.la5; ID=00000017
+#L=4032; XY="$LRJ5"; LONLAT="$LONLATRJ5"; ARG="$ARGRJ5"; SUF=.rj5; ID=00000016
 #L=5148; XY="$LPR5"; LONLAT="$LONLATPR5"; ARG="$ARGPR5"; SUF=.pr5; ID=00000021
+L=4032; XY="$L"; LONLAT="$LONLAT"; ARG="$ARG"; SUF=$SUF; ID=00000036
 
 
 
@@ -42,8 +43,8 @@ L2X=../../map/dat/l2x_l2y_/l2x${SUF}.txt
 L2Y=../../map/dat/l2x_l2y_/l2y${SUF}.txt
 MAP=.CAMA
 #
-YEARMIN=2014
-YEARMAX=2014
+#YEARMIN=2014
+#YEARMAX=2014
 YEARMIN=2019
 YEARMAX=2019
 ############################################################
@@ -63,8 +64,8 @@ PRJRUN=W5E5N_C_
 #PRJRUN=W5E5N_C1
 #PRJRUN=W5E5N_C2
 #PRJRUN=W5E5N_C3
-#PRJRUN=W5E5N_C4     # without aqueducts
-PRJRUN=W5E5N_c4    # with aqueducts
+PRJRUN=W5E5N_C4     # without aqueducts
+#PRJRUN=W5E5N_c4    # with aqueducts
 #PRJRUN=W5E5N_x4    # with aqueducts (explicit only)
 #PRJRUN=W5E5N_C5
 #PRJRUN=W5E5N_C6
@@ -177,7 +178,7 @@ echo $PNGCAD
 
 htmath $L div $WITRENURB $WITALLURB $CADURB
 if [ "$OPTCITY" = "yes" ]; then
-  if [ "$SUF" = ".tk5" ]; then
+  if [ "$SUF" = ".bk5" ]; then
     SUMNUM=0
     SUMDEN=0
 

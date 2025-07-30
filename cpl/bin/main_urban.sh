@@ -8,7 +8,7 @@
 # Basic settings (Edit here if you like)
 ############################################################
 PRJ=W5E5		# Project name
-RUN=N_C_                # Run name URBAN
+RUN=N_C4                # Run name URBAN
 YEARMIN=2019
 YEARMAX=2019
 SECINT=86400            # interval

@@ -7,7 +7,7 @@
 ############################################################
 PRJ="W5E5"                         # project
 #PRJ="AK10"
-RUN="LR__"                          # run
+RUN="N_C4"                          # run
 #PRJMET=WFDE                        # project for meteorology
 #RUNMET=I___
 PRJMET=W5E5
@@ -185,7 +185,7 @@ FRIVNUM=../../map/out/riv_num_/rivnum${MAP}${SUF}  # river id
 #FRIVNUM=../../map/dat/nat_msk_/C05_e___20000000${MAP}${SUF}
 #FRIVNUM=./temp.baka.hlf
 FLNDARA=../../map/dat/lnd_ara_/lndara${MAP}${SUF}  # land area
-FFLWDIR=../../map/dat/flw_dir_/flwdir${MAP}${SUF}  # flwo direction
+#FFLWDIR=../../map/dat/flw_dir_/flwdir${MAP}${SUF}  # flwo direction
 FRIVMOU=../../map/out/riv_mou_/rivmou${MAP}${SUF}  # river mouse
 #
 FIRGARA=../../map/dat/irg_ara_/S05_____20000000${SUF}
@@ -980,7 +980,8 @@ YEARENV=0000
 FENVFLW=$DIRENVOUT/$PRJENV$RUNENV$YEARENV$MON$DAY$SUF
 if [ -f $FENVFLW ]; then
   htmask $ARG $FENVFLW $MASK eq $NUM $TEMP > $DN
-  htmask $ARG $TEMP  $FFLWDIR eq 9   $TEMP > $DN
+  htmask $ARG $FRIVOUT $MASK eq $NUM $TEMP > $DN
+  #htmask $ARG $TEMP  $FFLWDIR eq 9   $TEMP > $DN
   ENVFLW=`htstat $ARG sum $TEMP | \
   awk '{printf("%12.2f",$1*86400*'${DAYS}'/1000/1000/1000/1000)}'`  
 else
